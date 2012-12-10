@@ -20,7 +20,7 @@ In Eclipse, right-click on your project in the Package Explorer then click `Prop
 
 In the properties window click `Java Build Path` on the left then click `Add JARs...` on the right.
 
-![](http://github.com/tapfortap/Documentation/blob/master/images/eclipse-02.png?raw=true)
+![](images/eclipse-02.png?raw=true)
 
 Navigate to the `TapForTap.jar` file you copied into your project earlier then click `OK`.
 
