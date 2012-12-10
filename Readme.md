@@ -6,6 +6,10 @@ Integrating Tap for Tap into your app is usually really easy. Add our library, `
 
 If you are not displaying Tap for Tap ads then you only need to follow steps 1 - 3. Call `TapForTap.initialize(Activity, "YOUR API KEY")` once when your app starts up, in the `onCreate` method of your main activity.
 
+## Video Walkthrough ##
+
+Watch a video that shows how to implement Tap for Tap from start to finish [here](http://www.youtube.com/watch?feature=player_embedded&v=LS7DEvITf7Y&hd=1).
+
 # Instructions #
 
 ## Step 1 - Add TapForTap.jar to your project ##
