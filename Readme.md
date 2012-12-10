@@ -8,7 +8,7 @@ If you are not displaying Tap for Tap ads then you only need to follow steps 1 -
 
 ## Video Walkthrough ##
 
-Watch a video that shows how to implement Tap for Tap from start to finish [here](http://www.youtube.com/watch?feature=player_embedded&v=LS7DEvITf7Y&hd=1).
+Watch a video that shows how to implement Tap for Tap from start to finish [here](http://www.youtube.com/watch?feature=player_embedded&v=xDj16PJ5WQk&hg=1).
 
 # Instructions #
 
