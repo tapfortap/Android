@@ -16,7 +16,7 @@ If your project doesn't have a libs folder create one and copy TapForTap.jar int
 
 In Eclipse, right-click on your project in the Package Explorer then click `Properties`.
 
-![](images/eclipse-01.png)
+![](https://raw.github.com/tapfortap/Android/master/images/eclipse-01.png)
 
 In the properties window click `Java Build Path` on the left then click `Add JARs...` on the right.
 
