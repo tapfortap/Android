@@ -20,38 +20,38 @@ In Eclipse, right-click on your project in the Package Explorer then click `Prop
 
 In the properties window click `Java Build Path` on the left then click `Add JARs...` on the right.
 
-![](images/eclipse-02.png?raw=true)
+![](https://raw.github.com/tapfortap/Android/master/images/eclipse-02.png)
 
 Navigate to the `TapForTap.jar` file you copied into your project earlier then click `OK`.
 
-![](http://github.com/tapfortap/Documentation/blob/master/images/eclipse-03.png?raw=true)
+![](https://raw.github.com/tapfortap/Android/master/images/eclipse-03.png)
 
 Make sure that the checkbox to export the library is checked on the `Order and Export` tab
 
-![](http://github.com/tapfortap/Documentation/blob/master/images/eclipse-04.png?raw=true)
+![](https://raw.github.com/tapfortap/Android/master/images/eclipse-04.png)
 
 Click `OK` to leave the properties window.
 
 
 ## Step 1 using IntelliJ IDEA ##
 
-In IDEA open your Project Structure via the File menu, File → Project Structure.
+In IDEA open your Project Structure via the File menu, File ? Project Structure.
 
-![](http://github.com/tapfortap/Documentation/blob/master/images/idea-01.png?raw=true)
+![](https://raw.github.com/tapfortap/Android/master/images/idea-01.png)
 
 Select `Libraries` under `Project Settings` on the left. Add a new Java library by clicking the plus icon up top, selecting Java, and then selecting `TapForTap.jar` in your `lib` or `libs` folder.
 
-![](http://github.com/tapfortap/Documentation/blob/master/images/idea-02.png?raw=true)
+![](https://raw.github.com/tapfortap/Android/master/images/idea-02.png)
 
-![](http://github.com/tapfortap/Documentation/blob/master/images/idea-03.png?raw=true)
+![](https://raw.github.com/tapfortap/Android/master/images/idea-03.png)
 
 IDEA will ask you to select which module to add it to and in most cases you can click OK to add it to the module selected by default.
 
-![](http://github.com/tapfortap/Documentation/blob/master/images/idea-04.png?raw=true)
+![](https://raw.github.com/tapfortap/Android/master/images/idea-04.png)
 
 Then click `OK` to leave the properties window.
 
-![](http://github.com/tapfortap/Documentation/blob/master/images/idea-05.png?raw=true)
+![](https://raw.github.com/tapfortap/Android/master/images/idea-05.png)
 
 
 ## Step 2 - Add permissions and activity to AndroidManifest.xml ##
