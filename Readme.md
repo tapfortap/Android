@@ -1,5 +1,8 @@
 # Android - SDK Implementation #
 
+## Current Version ##
+**2.1.0** - [See Changelog](https://github.com/tapfortap/Android/blob/master/android-changelog.md)
+
 ## General Information ##
 
 Integrating Tap for Tap into your app is usually really easy. Add our library, `TapForTap.jar`, to your Android project, call `TapForTap.initialize()` when your app starts, and then add a `com.tapfortap.AdView` to your layout or display an interstitial or app wall (if you are showing ads in that app). That's it!
