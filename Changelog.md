@@ -1,4 +1,9 @@
 
+### 2.1.2 / 2013-02-05 
+
+  * Fixed determining width of Ad banner.
+  * Fixed a rare occurence of a bad URL. 
+
 ### 2.1.1 / 2013-01-14 
 
   * Respect gravity setting on AdView
