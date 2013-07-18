@@ -1,3 +1,3 @@
 # TapForTap Android SDK
 
-See http://tapfortap.com/developer#documentation
+See https://tapfortap.com/doc/Android
