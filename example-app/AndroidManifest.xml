@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.tapfortap.FullScreenAdActivity"/>
+        <activity android:name="com.tapfortap.FullScreenAdActivity"android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
     </application>
 </manifest>
