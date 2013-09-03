@@ -115,7 +115,7 @@ public class MainActivity extends Activity {
         showInterstitial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                interstitial.showAndLoadNext();
+                interstitial.showAndLoad();
             }
         });
 
@@ -125,7 +125,7 @@ public class MainActivity extends Activity {
         showAppWall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                appWall.showAndLoadNext();
+                appWall.showAndLoad();
             }
         });
 
