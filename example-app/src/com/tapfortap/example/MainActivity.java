@@ -8,9 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import com.tapfortap.AppWallAd;
-import com.tapfortap.BannerAd;
-import com.tapfortap.InterstitialAd;
+import com.tapfortap.AppWall;
+import com.tapfortap.Banner;
+import com.tapfortap.Interstitial;
 import com.tapfortap.TapForTap;
 
 public class MainActivity extends Activity {
@@ -29,20 +29,20 @@ public class MainActivity extends Activity {
         layout.setOrientation(LinearLayout.VERTICAL);
 
         float density = getResources().getDisplayMetrics().density;
-        BannerAd bannerAd = BannerAd.createAndShow(this, new BannerAd.BannerAdListener() {
+        Banner banner = Banner.create(this, new Banner.BannerListener() {
             @Override
-            public void bannerAdOnReceive(BannerAd bannerAd) {
-                Log.d(TAG, "bannerAdOnReceive");
+            public void bannerOnReceive(Banner Banner) {
+                Log.d(TAG, "BannerOnReceive");
             }
 
             @Override
-            public void bannerAdOnFail(BannerAd bannerAd, String s, Throwable throwable) {
-                Log.d(TAG, "bannerAdOnFail");
+            public void bannerOnFail(Banner Banner, String s, Throwable throwable) {
+                Log.d(TAG, "BannerOnFail");
             }
 
             @Override
-            public void bannerAdOnTap(BannerAd bannerAd) {
-                Log.d(TAG, "bannerAdOnTap");
+            public void bannerOnTap(Banner Banner) {
+                Log.d(TAG, "BannerOnTap");
             }
         });
 
@@ -50,62 +50,62 @@ public class MainActivity extends Activity {
         int height = (int)(50 * density);
         LinearLayout.LayoutParams viewParams = new LinearLayout.LayoutParams(width, height);
         viewParams.gravity = Gravity.CENTER;
-        bannerAd.setLayoutParams(viewParams);
+        banner.setLayoutParams(viewParams);
 
-        final InterstitialAd interstitialAd = InterstitialAd.createAndLoad(this, new InterstitialAd.InterstitialAdListener() {
+        final Interstitial interstitial = Interstitial.create(this, new Interstitial.InterstitialListener() {
             @Override
-            public void interstitialAdOnReceive(InterstitialAd interstitialAd) {
-                Log.d(TAG, "interstitialAdOnReceive");
+            public void interstitialOnReceive(Interstitial interstitial) {
+                Log.d(TAG, "InterstitialOnReceive");
             }
 
             @Override
-            public void interstitialAdOnFail(InterstitialAd interstitialAd, String s, Throwable throwable) {
-                Log.d(TAG, "interstitialAdOnFail");
-                interstitialAd.load();
+            public void interstitialOnFail(Interstitial interstitial, String reason, Throwable throwable) {
+                Log.d(TAG, "InterstitialOnFail");
+                interstitial.load();
             }
 
             @Override
-            public void interstitialAdOnShow(InterstitialAd interstitialAd) {
-                Log.d(TAG, "interstitialAdOnShow");
+            public void interstitialOnShow(Interstitial interstitial) {
+                Log.d(TAG, "InterstitialOnShow");
             }
 
             @Override
-            public void interstitialAdOnTap(InterstitialAd interstitialAd) {
-                Log.d(TAG, "interstitialAdOnTap");
+            public void interstitialOnTap(Interstitial interstitial) {
+                Log.d(TAG, "InterstitialOnTap");
             }
 
             @Override
-            public void interstitialAdOnDismiss(InterstitialAd interstitialAd) {
-                Log.d(TAG, "interstitialAdOnDismiss");
+            public void interstitialOnDismiss(Interstitial interstitial) {
+                Log.d(TAG, "InterstitialOnDismiss");
             }
         });
 
-        final AppWallAd appWallAd = AppWallAd.createAndLoad(this, new AppWallAd.AppWallAdListener() {
+        final AppWall appWall = AppWall.create(this, new AppWall.AppWallListener() {
             @Override
-            public void appWallAdOnReceive(AppWallAd appWallAd) {
-                Log.d(TAG, "appWallAdOnReceive");
+            public void appWallOnReceive(AppWall appWall) {
+                Log.d(TAG, "AppWallOnReceive");
             }
 
             @Override
-            public void appWallAdOnFail(AppWallAd appWallAd, String s, Throwable throwable) {
-                Log.d(TAG, "appWallAdOnFail");
+            public void appWallOnFail(AppWall appWall, String s, Throwable throwable) {
+                Log.d(TAG, "AppWallOnFail");
                 // If we fail try to load again.
-                appWallAd.load();
+                appWall.load();
             }
 
             @Override
-            public void appWallAdOnShow(AppWallAd appWallAd) {
-                Log.d(TAG, "appWallAdOnShow");
+            public void appWallOnShow(AppWall appWall) {
+                Log.d(TAG, "AppWallOnShow");
             }
 
             @Override
-            public void appWallAdOnTap(AppWallAd appWallAd) {
-                Log.d(TAG, "appWallAdOnTap");
+            public void appWallOnTap(AppWall appWall) {
+                Log.d(TAG, "AppWallOnTap");
             }
 
             @Override
-            public void appWallAdOnDismiss(AppWallAd appWallAd) {
-                Log.d(TAG, "appWallAdOnDismiss");
+            public void appWallOnDismiss(AppWall appWall) {
+                Log.d(TAG, "AppWallOnDismiss");
             }
         });
 
@@ -115,7 +115,7 @@ public class MainActivity extends Activity {
         showInterstitial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                interstitialAd.show();
+                interstitial.showAndLoadNext();
             }
         });
 
@@ -125,11 +125,11 @@ public class MainActivity extends Activity {
         showAppWall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                appWallAd.show();
+                appWall.showAndLoadNext();
             }
         });
 
-        layout.addView(bannerAd);
+        layout.addView(banner);
         layout.addView(showAppWall);
         layout.addView(showInterstitial);
         setContentView(layout);
